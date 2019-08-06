@@ -10,7 +10,6 @@ getFoodData();
 
 function getNameData(){
   var settings = {
-    url: 'http://localhost:3001/names',
     method: 'GET',
     dataType: 'json',
     success: handleNameDataFromServer
