@@ -1,0 +1,7 @@
+[{
+  "name": "Bob"
+}, {
+  "name": "John"
+}, {
+  "name": "Mary"
+}]
