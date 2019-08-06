@@ -1,0 +1,16 @@
+{
+  "name": "clientserverdemo",
+  "version": "1.0.0",
+  "description": "we are here fuze in",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Joshua",
+    "Ross"
+  ],
+  "author": "",
+  "license": "ISC"
+}
