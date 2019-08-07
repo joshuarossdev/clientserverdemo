@@ -1,21 +1,38 @@
+$(document).ready(startApp);
 
-
-$(document).ready( startApp );
-
-function startApp(){
-getData();
+function startApp() {
+  getNameData();
+  getFoodData();
 }
 
-function getData(){
+function getNameData() {
   var settings = {
-    url: '../server/getnames.json',
+    url: 'http://localhost:3001/names',
     method: 'GET',
     dataType: 'json',
-    success: handleDataFromServer
+    success: handleNameDataFromServer
   }
   $.ajax(settings)
 }
 
-function handleDataFromServer( response ){
-  console.log( response );
+function getFoodData() {
+  var settings = {
+    url: 'http://localhost:3001/food',
+    method: 'GET',
+    dataType: 'json',
+    success: handleNameDataFromServer
+  }
+  $.ajax(settings)
+}
+
+function handleNameDataFromServer(response) {
+  console.log(response);
+  for (var index = 0; index < response.length; index++) {
+    var nameDiv = $('<div>').text(response[index].name);
+    $('body').append(nameDiv);
+  }
+}
+
+function handleFavFoodDataFromServer(response) {
+  console.log(response);
 }
